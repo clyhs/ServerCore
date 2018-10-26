@@ -37,5 +37,38 @@ public class ColumnDesc {
     public ColumnDesc() {
     }
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public boolean isNotNull() {
+		return notNull;
+	}
+
+	public void setNotNull(boolean notNull) {
+		this.notNull = notNull;
+	}
+
+	public Field getField() {
+		return field;
+	}
+
+	public void setField(Field field) {
+		this.field = field;
+	}
+
+	public IConverter getConverter() {
+		return converter;
+	}
+
+	public void setConverter(IConverter converter) {
+		this.converter = converter;
+	}
+
+    
 
 }

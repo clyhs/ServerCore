@@ -12,6 +12,9 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * 队列执行器</br>
  * 该executor执行完毕一个任务的时候，会自动从该任务所属队列中获取下一个任务执行，直到队列为空
@@ -24,7 +27,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Slf4j
 public class QueueExecutor extends ThreadPoolExecutor {
 
-
+    private static final Logger log = LoggerFactory.getLogger(QueueExecutor.class);
     /**
      * 执行器名称
      */
@@ -83,5 +86,30 @@ public class QueueExecutor extends ThreadPoolExecutor {
         }
     }
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getCorePoolSize() {
+		return corePoolSize;
+	}
+
+	public void setCorePoolSize(int corePoolSize) {
+		this.corePoolSize = corePoolSize;
+	}
+
+	public int getMaxPoolSize() {
+		return maxPoolSize;
+	}
+
+	public void setMaxPoolSize(int maxPoolSize) {
+		this.maxPoolSize = maxPoolSize;
+	}
+
+    
 
 }

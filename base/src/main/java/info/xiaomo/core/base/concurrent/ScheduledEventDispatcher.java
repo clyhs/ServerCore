@@ -11,6 +11,9 @@ import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * 场景定时事件派发器. </br>
  * <p>
@@ -24,6 +27,8 @@ import java.util.concurrent.TimeUnit;
 @Data
 @Slf4j
 public class ScheduledEventDispatcher implements Runnable {
+	
+	private static final Logger log = LoggerFactory.getLogger(ScheduledEventDispatcher.class);
 
     private boolean running = false;
 

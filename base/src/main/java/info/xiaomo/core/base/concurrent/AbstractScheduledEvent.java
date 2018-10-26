@@ -62,5 +62,38 @@ public abstract class AbstractScheduledEvent extends AbstractCommand {
         return super.clone();
     }
 
+	public long getEnd() {
+		return end;
+	}
+
+	public void setEnd(long end) {
+		this.end = end;
+	}
+
+	public long getRemain() {
+		return remain;
+	}
+
+	public void setRemain(long remain) {
+		this.remain = remain;
+	}
+
+	public int getLoop() {
+		return loop;
+	}
+
+	public void setLoop(int loop) {
+		this.loop = loop;
+	}
+
+	public long getDelay() {
+		return delay;
+	}
+
+	public void setDelay(long delay) {
+		this.delay = delay;
+	}
+
+    
 
 }

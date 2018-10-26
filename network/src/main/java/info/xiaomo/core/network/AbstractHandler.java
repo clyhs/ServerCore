@@ -1,5 +1,9 @@
 package info.xiaomo.core.network;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import info.xiaomo.core.base.concurrent.QueueExecutor;
 import info.xiaomo.core.base.concurrent.command.IQueueDriverCommand;
 import info.xiaomo.core.base.concurrent.queue.ICommandQueue;
 import lombok.Data;
@@ -11,6 +15,8 @@ import lombok.extern.slf4j.Slf4j;
 @Data
 @Slf4j
 public abstract class AbstractHandler<T> implements IQueueDriverCommand {
+	
+	protected final Logger log = LoggerFactory.getLogger(getClass());
 
     protected T message;
 
@@ -70,4 +76,33 @@ public abstract class AbstractHandler<T> implements IQueueDriverCommand {
         }
     }
 
+	public T getMessage() {
+		return message;
+	}
+
+	public void setMessage(T message) {
+		this.message = message;
+	}
+
+	public Object getSession() {
+		return session;
+	}
+
+	public void setSession(Object session) {
+		this.session = session;
+	}
+
+	public IHandlerFilter getFilter() {
+		return filter;
+	}
+
+	public void setFilter(IHandlerFilter filter) {
+		this.filter = filter;
+	}
+
+	public Logger getLog() {
+		return log;
+	}
+
+    
 }

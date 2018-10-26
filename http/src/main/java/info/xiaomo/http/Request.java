@@ -107,4 +107,58 @@ public class Request {
         });
 
     }
+
+	public String getPath() {
+		return path;
+	}
+
+	public void setPath(String path) {
+		this.path = path;
+	}
+
+	public boolean isParameterParsed() {
+		return parameterParsed;
+	}
+
+	public void setParameterParsed(boolean parameterParsed) {
+		this.parameterParsed = parameterParsed;
+	}
+
+	public FullHttpRequest getMsg() {
+		return msg;
+	}
+
+	public void setMsg(FullHttpRequest msg) {
+		this.msg = msg;
+	}
+
+	public Channel getChannel() {
+		return channel;
+	}
+
+	public void setChannel(Channel channel) {
+		this.channel = channel;
+	}
+
+	public boolean isKeepAlive() {
+		return keepAlive;
+	}
+
+	public void setKeepAlive(boolean keepAlive) {
+		this.keepAlive = keepAlive;
+	}
+
+	public URI getUri() {
+		return uri;
+	}
+
+	public HttpMethod getMethod() {
+		return method;
+	}
+
+	public void setParameters(Map<String, String> parameters) {
+		this.parameters = parameters;
+	}
+    
+    
 }

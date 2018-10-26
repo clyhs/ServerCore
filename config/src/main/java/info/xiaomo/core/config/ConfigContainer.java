@@ -30,4 +30,22 @@ public class ConfigContainer<T> implements IConfigContainer {
     public List<T> getList() {
         return configList;
     }
+
+	public Map<Object, T> getConfigMap() {
+		return configMap;
+	}
+
+	public void setConfigMap(Map<Object, T> configMap) {
+		this.configMap = configMap;
+	}
+
+	public List<T> getConfigList() {
+		return configList;
+	}
+
+	public void setConfigList(List<T> configList) {
+		this.configList = configList;
+	}
+    
+    
 }

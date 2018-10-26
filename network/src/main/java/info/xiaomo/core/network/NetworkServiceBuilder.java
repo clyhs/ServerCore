@@ -77,4 +77,94 @@ public class NetworkServiceBuilder {
     public NetworkServiceImpl createService() {
         return new NetworkServiceImpl(this);
     }
+
+	public int getBossLoopGroupCount() {
+		return bossLoopGroupCount;
+	}
+
+	public void setBossLoopGroupCount(int bossLoopGroupCount) {
+		this.bossLoopGroupCount = bossLoopGroupCount;
+	}
+
+	public int getWorkerLoopGroupCount() {
+		return workerLoopGroupCount;
+	}
+
+	public void setWorkerLoopGroupCount(int workerLoopGroupCount) {
+		this.workerLoopGroupCount = workerLoopGroupCount;
+	}
+
+	public int getPort() {
+		return port;
+	}
+
+	public void setPort(int port) {
+		this.port = port;
+	}
+
+	public INetworkConsumer getConsumer() {
+		return consumer;
+	}
+
+	public void setConsumer(INetworkConsumer consumer) {
+		this.consumer = consumer;
+	}
+
+	public INetworkEventListener getListener() {
+		return listener;
+	}
+
+	public void setListener(INetworkEventListener listener) {
+		this.listener = listener;
+	}
+
+	public IMessageAndHandler getImessageandhandler() {
+		return imessageandhandler;
+	}
+
+	public void setImessageandhandler(IMessageAndHandler imessageandhandler) {
+		this.imessageandhandler = imessageandhandler;
+	}
+
+	public boolean isWebSocket() {
+		return isWebSocket;
+	}
+
+	public void setWebSocket(boolean isWebSocket) {
+		this.isWebSocket = isWebSocket;
+	}
+
+	public boolean isSsl() {
+		return ssl;
+	}
+
+	public void setSsl(boolean ssl) {
+		this.ssl = ssl;
+	}
+
+	public String getSslKeyCertChainFile() {
+		return sslKeyCertChainFile;
+	}
+
+	public void setSslKeyCertChainFile(String sslKeyCertChainFile) {
+		this.sslKeyCertChainFile = sslKeyCertChainFile;
+	}
+
+	public String getSslKeyFile() {
+		return sslKeyFile;
+	}
+
+	public void setSslKeyFile(String sslKeyFile) {
+		this.sslKeyFile = sslKeyFile;
+	}
+
+	public List<ChannelHandler> getExtraHandlers() {
+		return extraHandlers;
+	}
+
+	public void setExtraHandlers(List<ChannelHandler> extraHandlers) {
+		this.extraHandlers = extraHandlers;
+	}
+    
+    
 }

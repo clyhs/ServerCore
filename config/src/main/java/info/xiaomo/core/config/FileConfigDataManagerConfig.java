@@ -51,4 +51,38 @@ public class FileConfigDataManagerConfig {
             this.xmlConfigFile = xmlFileScan.value();
         }
     }
+
+	public String getXmlConfigFile() {
+		return xmlConfigFile;
+	}
+
+	public void setXmlConfigFile(String xmlConfigFile) {
+		this.xmlConfigFile = xmlConfigFile;
+	}
+
+	public String getConfigPackage() {
+		return configPackage;
+	}
+
+	public void setConfigPackage(String configPackage) {
+		this.configPackage = configPackage;
+	}
+
+	public String getConfigFileDir() {
+		return configFileDir;
+	}
+
+	public void setConfigFileDir(String configFileDir) {
+		this.configFileDir = configFileDir;
+	}
+
+	public String getConfigFileSuffix() {
+		return configFileSuffix;
+	}
+
+	public void setConfigFileSuffix(String configFileSuffix) {
+		this.configFileSuffix = configFileSuffix;
+	}
+    
+    
 }
